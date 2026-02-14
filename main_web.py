@@ -138,8 +138,16 @@ def draw_team(img, draw, pos, rank, team, text_color="black"):
     """Draw one team's logo and data at the specified coordinate positions."""
     tag = team.get("logo_tag", "").strip()
     if tag:
-        logo_path = os.path.join(BASE_DIR, LOGO_DIR, f"{tag}.png")
-        if os.path.exists(logo_path):
+        # Case-insensitive logo lookup (Linux is case-sensitive unlike Windows)
+        logos_dir = os.path.join(BASE_DIR, LOGO_DIR)
+        logo_path = None
+        if os.path.isdir(logos_dir):
+            target = f"{tag}.png".lower()
+            for f in os.listdir(logos_dir):
+                if f.lower() == target:
+                    logo_path = os.path.join(logos_dir, f)
+                    break
+        if logo_path and os.path.exists(logo_path):
             logo = Image.open(logo_path).convert("RGBA")
             if "logo_box" in pos:
                 s = pos.get("logo_size", LOGO_SIZE)
