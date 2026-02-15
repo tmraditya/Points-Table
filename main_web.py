@@ -232,7 +232,7 @@ def generate_scoreboard():
 
 
 # --- Background Thread for Image Generation ---
-POLLING_INTERVAL = 10  # seconds between each refresh
+POLLING_INTERVAL = 5  # seconds between each refresh
 
 def scoreboard_loop():
     """Continuously regenerate the scoreboard image in the background."""
@@ -278,7 +278,7 @@ def index():
         img.src = newImg.src;
       };
       newImg.src = '/scoreboard.png?t=' + Date.now();
-    }, 3000);
+    }, 2000);
   </script>
 </body>
 </html>"""
