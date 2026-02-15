@@ -232,7 +232,7 @@ def generate_scoreboard():
 
 
 # --- Background Thread for Image Generation ---
-POLLING_INTERVAL = 30  # seconds between each refresh
+POLLING_INTERVAL = 15  # seconds between each refresh
 
 def scoreboard_loop():
     """Continuously regenerate the scoreboard image in the background."""
