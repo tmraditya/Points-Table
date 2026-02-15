@@ -315,8 +315,16 @@ def scoreboard_image():
     
     On Vercel (serverless), the image is generated fresh each request
     and returned from memory — no disk writes needed.
-    For local dev, it also works but the background thread handles caching.
+    
+    Set env var PAUSED=true to stop GAPI calls and return the bare template.
     """
+    # Check if paused — return bare template without calling Google Sheets API
+    if os.environ.get("PAUSED", "").lower() == "true":
+        template_path = os.path.join(BASE_DIR, IMAGE_PATH)
+        if os.path.exists(template_path):
+            return send_file(template_path, mimetype="image/png")
+        return Response(b"Paused", status=200, mimetype="text/plain")
+
     try:
         img = generate_scoreboard_image()
         buf = BytesIO()
