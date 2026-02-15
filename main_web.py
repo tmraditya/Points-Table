@@ -92,7 +92,7 @@ ROW_NUM_FS = 85
 
 team_positions = [
     # ── Team 1 — large featured card (top-left) ──
-    {"logo": (95, 195), "logo_size": 370, "logo_box": (638, 1348, 1200, 1735), "name_fs": 140, "num_fs": 105, "bold": True, "name": (235, 200), "name_box": (1501, 1313, 2745, 1537), "mp": (230, 265), "mp_box": (1466, 1619, 1713, 1744), "booyah": (290, 265), "booyah_box": (1714, 1619, 2003, 1744), "elims": (345, 265), "elims_box": (2004, 1619, 2221, 1744), "place": (385, 265), "place_box": (2222, 1619, 2440, 1744), "total": (420, 265), "total_box": (2513, 1619, 2756, 1744)},
+    {"logo": (95, 195), "logo_size": 370, "logo_box": (638, 1348, 1200, 1735), "name_fs": 130, "num_fs": 105, "bold": True, "name": (235, 200), "name_box": (1501, 1313, 2745, 1537), "mp": (230, 265), "mp_box": (1466, 1619, 1713, 1744), "booyah": (290, 265), "booyah_box": (1714, 1619, 2003, 1744), "elims": (345, 265), "elims_box": (2004, 1619, 2221, 1744), "place": (385, 265), "place_box": (2222, 1619, 2440, 1744), "total": (420, 265), "total_box": (2513, 1619, 2756, 1744)},
 
     # ── Teams 2–5 — left-side rows ──
     {"logo": (465, 1974), "logo_size": ROW_LOGO_SIZE, "logo_box": (465, 1974, 613, 2120), "name_fs": ROW_NAME_FS, "num_fs": ROW_NUM_FS, "name": (614, 1974), "name_box": (614, 1974, 1464, 2120), "name_align": "left", "mp": (1589, 1974), "mp_box": (1465, 1974, 1714, 2120), "booyah": (1858, 1974), "booyah_box": (1716, 1974, 2000, 2120), "elims": (2110, 1974), "elims_box": (2001, 1974, 2220, 2120), "place": (2329, 1974), "place_box": (2221, 1974, 2438, 2120), "total": (2677, 1974), "total_box": (2590, 1974, 2765, 2120)},
